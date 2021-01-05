@@ -22,3 +22,5 @@ image.onload = function () {
     ctx.drawImage(image, 0, 0);
 }
 image.src = 'Atolhir-mein-title-text.png';
+
+///asdasdasdasd
