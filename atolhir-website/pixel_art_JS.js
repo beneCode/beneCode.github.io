@@ -23,4 +23,3 @@ image.onload = function () {
 }
 image.src = 'Atolhir-mein-title-text.png';
 
-///asdasdasdasd
