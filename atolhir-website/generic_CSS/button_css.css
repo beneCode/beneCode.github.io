@@ -3,7 +3,6 @@
     position: absolute;
     z-index: 1;
     height: 11%;
-    margin-left: -8%;
     top: 18%;
     background-color: Transparent;
     border: none;
@@ -19,28 +18,28 @@
 #button_news
 {
     width: 14%;
-    left: 18%;
+    left: 10%;
     background-image: url(../pixel_art/button-news.png);
 }
 
 #button_forum
 {
     width: 22%;
-    left: 33%;
+    left: 25%;
     background-image: url(../pixel_art/button-forum.png);
 }
 
 #button_demo
 {
-    width: 14%;
-    left: 56%;
+    width: 15%;
+    left: 48%;
     background-image: url(../pixel_art/button-demo.png);
 }
 
 #button_about_us
 {
     width: 30%;
-    left: 70%;
+    left: 63%;
     background-image: url(../pixel_art/button-about_us.png);
 }
 
