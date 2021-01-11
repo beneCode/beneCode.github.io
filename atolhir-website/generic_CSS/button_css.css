@@ -1,7 +1,10 @@
 .button
 {
+    position: absolute;
     z-index: 1;
     height: 11%;
+    margin-left: -8%;
+    top: 18%;
     background-color: Transparent;
     border: none;
     background-position: center center;
@@ -16,40 +19,28 @@
 #button_news
 {
     width: 14%;
-    position: absolute;
     left: 18%;
-    margin-left: -8%;
-    top: 18%;
     background-image: url(../pixel_art/button-news.png);
 }
 
 #button_forum
 {
     width: 22%;
-    position: absolute;
     left: 33%;
-    margin-left: -8%;
-    top: 18%;
     background-image: url(../pixel_art/button-forum.png);
 }
 
 #button_demo
 {
     width: 14%;
-    position: absolute;
     left: 56%;
-    margin-left: -8%;
-    top: 18%;
     background-image: url(../pixel_art/button-demo.png);
 }
 
 #button_about_us
 {
     width: 30%;
-    position: absolute;
     left: 70%;
-    margin-left: -8%;
-    top: 18%;
     background-image: url(../pixel_art/button-about_us.png);
 }
 
