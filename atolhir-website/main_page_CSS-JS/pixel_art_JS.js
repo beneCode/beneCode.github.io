@@ -14,13 +14,12 @@ img.onload = function()
 }
 
 //title
-var ctx = document.getElementById('title');
-    ctx = canvas.getContext('2d');
+var ctx = document.getElementById('title').getContext('2d');
 // load image
 var image = new Image();
 image.onload = function () {
     // draw the image into the canvas
     ctx.drawImage(image, 0, 0);
 }
-image.src = '../pixel_art/Atolhir-mein-title-text.png';
+image.src = "./pixel_art/Atolhir-mein-title-text.png";
 
