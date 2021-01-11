@@ -21,5 +21,5 @@ image.onload = function () {
     // draw the image into the canvas
     ctx.drawImage(image, 0, 0);
 }
-image.src = "./pixel_art/Atolhir-mein-title-text.png";
+image.src="./pixel_art/Atolhir-mein-title-text.png";
 
