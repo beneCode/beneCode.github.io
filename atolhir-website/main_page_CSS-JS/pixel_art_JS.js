@@ -3,7 +3,7 @@ var canvas = document.getElementById("background"),
     context = canvas.getContext("2d"),
     img = new Image();
 
-img.src = '../atolhir-website/pixel_art/website-background.png';
+img.src = 'https://benecode.github.io/atolhir-website/pixel_art/website-background.png';
 
 img.onload = function()
 {
