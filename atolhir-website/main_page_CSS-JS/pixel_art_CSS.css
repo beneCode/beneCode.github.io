@@ -17,8 +17,8 @@ html, body
 
 #title
 {
-    width: 17.5%;
-    height: 15%;
+    width: 20%;
+    height: 17.5%;
     image-rendering: -moz-crisp-edges;
     image-rendering: -webkit-crisp-edges;
     image-rendering: pixelated;
@@ -26,8 +26,8 @@ html, body
 
     position: absolute; 
     left: 50%;
-    margin-left: -8%;
-    top: 10px;
+    margin-left: -11%;
+    top: 5px;
     z-index: 1
 }
 
@@ -43,9 +43,9 @@ html, body
 
     background-color: #04021a80;
 
-    padding: 20px;
+    padding: 1%;
 
     position: absolute;
-    left: 20%;
+    left: 19%;
     top: 30%;
 }
