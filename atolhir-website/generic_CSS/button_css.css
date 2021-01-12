@@ -17,29 +17,29 @@
 
 #button_news
 {
-    width: 14%;
-    left: 10%;
+    width: 12%;
+    left: 16%;
     background-image: url(../pixel_art/button-news.png);
 }
 
 #button_forum
 {
-    width: 22%;
-    left: 25%;
+    width: 20%;
+    left: 28%;
     background-image: url(../pixel_art/button-forum.png);
 }
 
 #button_demo
 {
-    width: 15%;
-    left: 48%;
+    width: 13%;
+    left: 49%;
     background-image: url(../pixel_art/button-demo.png);
 }
 
 #button_about_us
 {
-    width: 30%;
-    left: 63%;
+    width: 28%;
+    left: 61%;
     background-image: url(../pixel_art/button-about_us.png);
 }
 
