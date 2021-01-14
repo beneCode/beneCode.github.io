@@ -43,3 +43,11 @@
     background-image: url(../pixel_art/button-about_us.png);
 }
 
+#button_back
+{
+    width: 5%;
+    left: 10px;
+    top: 10px;
+    background-image: url(../pixel_art/button-back.png);
+}
+
