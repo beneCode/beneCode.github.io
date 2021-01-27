@@ -1,0 +1,33 @@
+#strona_news_mein_div
+{
+    color: white;
+
+    width: 60%;
+    height: 85%;
+    
+    text-align: left;
+    vertical-align: middle;
+
+    background-color: #04021a80;
+
+    padding: 1%;
+
+    position: absolute;
+    left: 19%;
+    top: 5%;
+}
+
+.gifs
+{
+    width: 15%;
+    height: 15%;
+    image-rendering: -moz-crisp-edges;
+    image-rendering: -webkit-crisp-edges;
+    image-rendering: pixelated;
+    image-rendering: crisp-edges;
+}
+
+#disappearing_platform
+{
+    margin-left: -1%;
+}

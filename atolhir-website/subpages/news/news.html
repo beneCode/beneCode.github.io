@@ -3,9 +3,66 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Atolhir-News</title>
+
+    <style>
+        *
+        {
+            cursor: url('../../pixel_art/leaf-cursor.png'), auto;
+        }
+    </style>
+
+    <link rel="shortcut icon" type="image/x-icon" href="../../pixel_art/website-icone.ico" sizes="16x16"/>
+
+    <link rel="stylesheet" href="../../generic_CSS/sub-pages_pixel_art.css">
+    <link rel="stylesheet" href="../../generic_CSS/button_css.css">
+    <link rel="stylesheet" href="../../generic_CSS/fonts_CSS.css">
+    <link rel="stylesheet" href="../../generic_CSS/social_media_CSS.css">
+    <link rel="stylesheet" href="./news_CSS.css">
+
 </head>
 <body>
-    news
+    <canvas id="background" width="405%" height="178%">
+        <script src="../../generic_JS/sub-pages_pixel_art.js"></script>
+    </canvas>
+
+    <div style="font-family: font-pixel;" id="strona_news_mein_div">
+        <h2 style="text-align: center;">Latest additions to the game</h2>
+        <ul>
+            <li>
+                <h4>Disappearing Platform</h4>
+                Platform that disappears once stepped on it.
+                <br>
+                <img src="../../pixel_art/disappearing_platform-news-page.gif" alt="disappearing platform"  class="gifs" id="disappearing_platform"/>
+            </li>
+            <li>
+                <h4>Grass tileset</h4>
+                First world main tileset.
+                <br>
+                <img src="../../pixel_art/grass_tileset-news-page.gif" alt="grass tileset" class="gifs"/>
+            </li>
+        </ul>
+    </div>
+
+    <button class="button" id="button_back" onclick="location.href='../../index.html'"></button>
+
+    <a href="https://www.instagram.com">
+        <img src="../../pixel_art/instagram.png" alt="instagram" class="social_media_img" id="instagram"/>
+    </a>
+    <a href="https://store.steampowered.com">
+        <img src="../../pixel_art/steam.png" alt="steam" class="social_media_img" id="steam"/>
+    </a>
+    <a href="https://www.youtube.com">
+        <img src="../../pixel_art/youtube.png" alt="youtube" class="social_media_img" id="youtube"/>
+    </a>
+    <a href="https://discord.com">
+        <img src="../../pixel_art/discord.png" alt="discord" class="social_media_img" id="discord"/>
+    </a>
+    <a href="https://www.twitch.tv">
+        <img src="../../pixel_art/twitch.png" alt="twitch" class="social_media_img" id="twitch"/>
+    </a>
+    <a href="https://twitter.com">
+        <img src="../../pixel_art/twitter.png" alt="twitter" class="social_media_img" id="twitter"/>
+    </a>
 </body>
 </html>
