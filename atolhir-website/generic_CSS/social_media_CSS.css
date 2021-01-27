@@ -1,0 +1,42 @@
+.social_media_img
+{
+    position: fixed;
+    right: 1%;
+
+    width: 7.5%;
+    height: 15%;
+    image-rendering: -moz-crisp-edges;
+    image-rendering: -webkit-crisp-edges;
+    image-rendering: pixelated;
+    image-rendering: crisp-edges;
+}
+
+#instagram
+{
+    top: 5%;
+}
+
+#steam
+{
+    top: 20%;
+}
+
+#youtube
+{
+    top: 35%;
+}
+
+#discord
+{
+    top: 50%;
+}
+
+#twitch
+{
+    top: 65%;
+}
+
+#twitter
+{
+    top: 80%;
+}
