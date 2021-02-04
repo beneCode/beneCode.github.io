@@ -1,24 +1,23 @@
-#background
-{  
-    width: 100%;
+html, body
+{
+    background-color: #0f141d;
+    margin: 0;
     height: 100%;
+
+    background-image: url("../pixel_art/website-background.png");
+    background-size: 39.5% 90%;
+    background-position: left top;
+    background-repeat: repeat;
     image-rendering: -moz-crisp-edges;
     image-rendering: -webkit-crisp-edges;
     image-rendering: pixelated;
     image-rendering: crisp-edges;
 }
 
-html, body
-{
-    background-color: #0f141d;
-    margin: 0;
-    height: 100%;
-}
-
 #demo-soon_scroll
 {
-    width: 40%;
-    height: 90%;
+    width: 35%;
+    height: 80%;
     image-rendering: -moz-crisp-edges;
     image-rendering: -webkit-crisp-edges;
     image-rendering: pixelated;
