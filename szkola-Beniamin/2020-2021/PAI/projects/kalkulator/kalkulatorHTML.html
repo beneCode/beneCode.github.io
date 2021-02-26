@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="kalkulatorCSS.css"/>
+
+    <script src="kalkulatorJS.js"></script>
+
+</head>
+<body>
+    <div class="calculator">
+        <div class="score">
+            <span id="outcome"></span>
+            <div class="work">
+                <span id="operation"></span>
+                <span id="value"></span>
+            </div>
+        </div>
+
+        <button class="clear" onclick="loadValue(15); return false">AC</button>
+        <button class="delete" onclick="loadValue(16); return false">DEL</button>
+        <button class="operator" onclick="loadValue(21); return false">^</button>
+        <button class="number" onclick="loadValue(1); return false">1</button>
+        <button class="number" onclick="loadValue(2); return false">2</button>
+        <button class="number" onclick="loadValue(3); return false">3</button>
+        <button class="operator" onclick="loadValue(20); return false">/</button>
+        <button class="number" onclick="loadValue(4); return false">4</button>
+        <button class="number" onclick="loadValue(5); return false">5</button>
+        <button class="number" onclick="loadValue(6); return false">6</button>
+        <button class="operator" onclick="loadValue(19); return false">*</button>
+        <button class="number" onclick="loadValue(7); return false">7</button>
+        <button class="number" onclick="loadValue(8); return false">8</button>
+        <button class="number" onclick="loadValue(9); return false">9</button>
+        <button class="operator" onclick="loadValue(18); return false">-</button>
+        <button class="number" onclick="loadValue(23); return false">•</button>
+        <button class="number" onclick="loadValue(0); return false">0</button>
+        <button class="equality" onclick="loadValue(22); calculate(); return false">=</button>
+        <button class="operator row-two" onclick="loadValue(17); return false">+</button>
+
+    </div>
+    <div style="margin: 25px;">
+        <button class="disPlayButton" onclick="disPlayArray(); return false">Display the solution</button>
+        <span id="calculator_table"></span>
+    </div>
+</body>
+</html>

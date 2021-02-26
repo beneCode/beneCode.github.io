@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="./kalendarz_CSS.css">
+
+</head>
+<body>
+    <div>
+        <button id="open-button" onclick="openKalender()">Kalendarz</button>
+
+        <div id="kalender">
+            <div class="looks" id="zegar">
+                <span id="timer-place"></span>
+                <span id="date-place"></span>
+            </div>
+            <div class="looks" id="days">
+                <div id="current-month"></div>
+                <button class="button-up-down" onclick="monthUpDown('down')">˄</button>
+                <button class="button-up-down" onclick="monthUpDown('up')">˅</button>
+                <div id="inner-days"></div>
+            </div>
+            <div class="looks" id="plan">
+
+            </div>
+            <script src="./kalendarz_JS.js"></script>
+        </div>
+
+        <div id="prompt">adadadasdad</div>
+
+    </div>
+</body>
+</html>
