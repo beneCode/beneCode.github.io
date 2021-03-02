@@ -45,12 +45,12 @@
 
             <span id="clock-icon"><i class="far fa-clock"></i></span>
             <input type="date" id="date-input" name="date"/>
-            <input type="time" id="time-input" name="time"/> 
+            <input type="time" id="time-input" name="time" step="1"/> 
             
             <span id="bars-icon"><i class="fas fa-bars"></i></span>
             <textarea name="textarea" id="description-input" placeholder="Add description"></textarea>
 
-            <button id="save-event" onclick="openCloseAddEventForm('close');">Save</button> <!--add save event function-->
+            <button id="save-event" onclick="openCloseAddEventForm('close'); addEventHandler();">Save</button>
         </div>
     </div>
     <div id="prompt"></div>

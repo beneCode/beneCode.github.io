@@ -191,9 +191,11 @@ class Event
         {
             document.getElementById("prompt").innerHTML =
             `
-                ${this.name}<br>
-                ${this.description}
-                <button id="close" onclick="closePrompt()">X</button>
+                <div id="prompt-text">
+                    <span id="prompt-name">${this.name}</span><br>
+                    ${this.description}
+                </div>
+                <button id="close-prompt" onclick="closePrompt()"><i class="fas fa-times"></i></button>
             `
             document.getElementById("prompt").style.display = "block";
 
@@ -204,9 +206,6 @@ class Event
 }
 
 let calendar = new Calendar();
-
-calendar.addEvent("event1", 2021, 2, 2, 1, 25, 20, "cos tam moldo");
-calendar.addEvent("event2", 2021, 1, 24, 14, 37, 40, "cos tam moldo 2");
 
 function monthUpDown(mode)
 {
@@ -225,11 +224,34 @@ function openCloseAddEventForm(mode)
             document.getElementById("add-event-form").style.display = "none";
             break;
         case "open":
+            document.getElementById('date-input').value = "";
+            document.getElementById('time-input').value = "";
+            document.getElementById('name-input').value = "";
+            document.getElementById('description-input').value = "";
+
             document.getElementById("add-event-form").style.display = "block";
             break;
     
         default:
             break;
-    }
+    }   
+}
+
+function addEventHandler()
+{
+    let selectedEventDate = new Date(document.getElementById("date-input").value);
+    let selectedEventTime = document.getElementById("time-input").value;
+
+    let name = document.getElementById("name-input").value;
+    let description = document.getElementById("description-input").value;
+
+    let yearSelect = selectedEventDate.getFullYear();
+    let monthSelect = selectedEventDate.getMonth();
+    let daySelect = selectedEventDate.getDate();
+
+    let hourSelect = selectedEventTime.slice(0, 2);
+    let minSelect = selectedEventTime.slice(3, 5);
+    let secSelect = selectedEventTime.slice(6, 8);
     
+    calendar.addEvent(name, yearSelect, monthSelect, daySelect, hourSelect, minSelect, secSelect, description);
 }
