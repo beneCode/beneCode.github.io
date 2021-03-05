@@ -1,6 +1,5 @@
 /*
-    Zgóry mówie że tłumaczenie języków nie jest w 100% zrobione przeze mnie,
-    dużą część kodu zawdzięczam Marcinowi.
+    Zgóry mówie że to tłumaczenie języków było wzorowane na tłumaczeniu zrobionego przez Marcina Banasia.
     Ja tylko przerobiłem ten kod i dostosowałem go na potrzeby mojego projektu :)
 */
 
