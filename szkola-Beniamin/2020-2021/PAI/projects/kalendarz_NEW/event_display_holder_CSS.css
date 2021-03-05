@@ -1,0 +1,109 @@
+#event-display-holder
+{
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+
+    width: 100%;
+    height: 320px;
+
+    text-align: center;
+}
+
+.event-display
+{
+    display: inline-block;
+    text-align: left;
+    vertical-align: middle;
+    
+    margin: 7.5px;
+    padding: 0px;
+
+    width: 75%;
+    min-height: 50px;
+    height: auto;
+
+    word-wrap: break-word;
+
+    padding: 10px;
+
+    color: rgb(150,150,150);
+    background-color: rgb(54,54,54);
+    border: 1px solid rgb(150,150,150);
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.35);
+}
+
+.event-display-name-holder
+{
+    position: relative;
+}
+
+.event-display-name
+{
+    position: absolute;
+    left: 0px;
+    top: 0px;
+
+    font-size: 17.5px;
+
+    width: 85%;
+    height: 21;
+
+    color: rgb(0,137,123);
+}
+
+.event-display-modify
+{
+    position: absolute;
+    right: 23px;
+    top: 0px;
+
+    font-size: 17.5px;
+
+    text-align: right;
+
+    width: 7.5%;
+    height: 21;
+
+    color: rgb(150,150,150);
+
+    background-color: transparent;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+
+.event-display-modify:hover
+{
+    position: absolute;
+    right: 24px;
+    top: -1px;
+}
+
+.event-display-delete
+{
+    position: absolute;
+    right: 0px;
+    top: 0px;
+
+    font-size: 17.5px;
+
+    text-align: right;
+
+    width: 7.5%;
+    height: 21;
+
+    color: rgb(150,150,150);
+
+    background-color: transparent;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+
+.event-display-delete:hover
+{
+    position: absolute;
+    right: 1px;
+    top: -1px;
+}

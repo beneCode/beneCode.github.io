@@ -3,11 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Calendar</title>
 
-    <script src="https://kit.fontawesome.com/a6e2755b4d.js" crossorigin="anonymous"></script> 
+    <script src="https://kit.fontawesome.com/a6e2755b4d.js" crossorigin="anonymous"></script>
+
+    <script src="./i18n.js" defer></script>
+    <script src="./kalendarz_JS.js" defer></script>
 
     <link rel="stylesheet" href="./kalendarz_CSS.css">
+    <link rel="stylesheet" href="./add_event_form_CSS.css">
+    <link rel="stylesheet" href="./event_display_holder_CSS.css">
 
 </head>
 <body>
@@ -26,16 +31,17 @@
         </div>
         <div id="plan">
             <div class="looks" id="selected-date">
-                <p id="selected-date-p">02 March 2021</p> 
+                <p id="selected-date-p"></p>
                 <button id="selected-date-gear"><i class="fas fa-cog"></i></button>
             </div>
             <div class="looks" id="event">
                 <button id="add-event" onclick="openCloseAddEventForm('open');"><i class="fas fa-plus"></i></button>
             </div>
+            <div id="event-display-holder"></div>
         </div>
     </div>
 
-    <div id="add-event-form">
+    <div id="add-event-form"> <!--add events-->
         <div id="add-event-holder">
             <div id="drag-bar">
                 <button id="close-add-event-form" onclick="openCloseAddEventForm('close');"><i class="fas fa-times"></i></button>
@@ -50,11 +56,31 @@
             <span id="bars-icon"><i class="fas fa-bars"></i></span>
             <textarea name="textarea" id="description-input" placeholder="Add description"></textarea>
 
-            <button id="save-event" onclick="openCloseAddEventForm('close'); addEventHandler();">Save</button>
+            <button id="save-event" onclick="openCloseAddEventForm('close'); addModifyEventHandler('add');" i18n="save"></button>
         </div>
     </div>
+
+    <div id="modify-event-form"> <!--modify events-->
+        <div id="modify-event-holder">
+            <div id="drag-bar">
+                <button id="close-modify-event-form" onclick="openCloseAddEventForm('close');"><i class="fas fa-times"></i></button>
+            </div>
+            
+            <input type="text" id="modify-name-input" name="name" placeholder="Add name" spellcheck="false"/>
+
+            <span id="clock-icon"><i class="far fa-clock"></i></span>
+            <input type="date" id="modify-date-input" name="date"/>
+            <input type="time" id="modify-time-input" name="time" step="1"/>
+            
+            <span id="bars-icon"><i class="fas fa-bars"></i></span>
+            <textarea name="textarea" id="modify-description-input" placeholder="Add description"></textarea>
+
+            <button id="modify-save-event" onclick="openCloseAddEventForm('close'); addModifyEventHandler('modify', 0);" i18n="save"></button>
+        </div>
+    </div>
+
     <div id="prompt"></div>
-    
-    <script src="./kalendarz_JS.js"></script>
+
+    <button id="language-change">EN</button>
 </body>
 </html>
