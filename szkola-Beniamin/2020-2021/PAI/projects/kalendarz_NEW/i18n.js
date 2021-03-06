@@ -1,8 +1,3 @@
-/*
-    Zgóry mówie że to tłumaczenie języków było wzorowane na tłumaczeniu zrobionego przez Marcina Banasia.
-    Ja tylko przerobiłem ten kod i dostosowałem go na potrzeby mojego projektu :)
-*/
-
 const i18n = new Proxy({
 	languages: ["pl", "en", "de"],
 	language: localStorage.language ?? (localStorage.language = "en"),
@@ -15,15 +10,6 @@ const i18n = new Proxy({
     {
 		// i18n for text
 		void [...document.querySelectorAll("*[i18n]")].forEach(v => v.innerText = i18n[v.attributes["i18n"].value])
-		// i18n for attributes
-		// todo
-		void [...document.querySelectorAll("*[i18n-attr]")].forEach(el => {
-			[...el.attributes]
-				.map(v => [v.name, v.value])
-				.filter(([_, v]) => v.startsWith("i18n:"))
-				.map(([k, v]) => [k, i18n[v.slice("i18n:".length)]])
-				.forEach(([k, v]) => el.attributes.getNamedItem(k).value = v)
-		})
 	},
 
 	translations: 
@@ -31,7 +17,7 @@ const i18n = new Proxy({
 		pl:
         {
 			mondayShort: "Pon",
-			tuesdayShort: "Wt",
+			tuesdayShort: "Wto",
 			wednesdayShort: "Śro",
 			thursdayShort: "Czw",
 			fridayShort: "Pią",
