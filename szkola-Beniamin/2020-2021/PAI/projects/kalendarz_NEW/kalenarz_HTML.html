@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" theme>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,78 +9,91 @@
 
     <script src="./i18n.js" defer></script>
     <script src="./kalendarz_JS.js" defer></script>
+    <script src="./theme-change/theme-toggle.js" defer></script>
 
     <link rel="stylesheet" href="./kalendarz_CSS.css">
     <link rel="stylesheet" href="./add_event_form_CSS.css">
     <link rel="stylesheet" href="./event_display_holder_CSS.css">
+    <link rel="stylesheet" href="./theme-change/theme-toggle.css">
+    <link rel="stylesheet" href="./light-dark-theme.css">
 
 </head>
-<body>
+<body theme>
     <div id="wrap">
         <div id="kalender">
-            <div class="looks" id="zegar">
+            <div class="looks" id="zegar" theme>
                 <span id="timer-place"></span>
                 <span id="date-place"></span>
             </div>
-            <div class="looks" id="days">
+            <div class="looks" id="days" theme>
                 <span id="current-month"></span>
-                <button class="button-up-down" onclick="monthUpDown('down');"><i class="fas fa-angle-left"></i></button>
-                <button class="button-up-down" onclick="monthUpDown('up');"><i class="fas fa-angle-right"></i></button>
+                <button class="button-up-down" onclick="monthUpDown('down');" theme><i class="fas fa-angle-left"></i></button>
+                <button class="button-up-down" onclick="monthUpDown('up');" theme><i class="fas fa-angle-right"></i></button>
                 <div id="inner-days"></div>
             </div>
         </div>
         <div id="plan">
-            <div class="looks" id="selected-date">
+            <div class="looks" id="selected-date" theme>
                 <p id="selected-date-p"></p>
-                <button id="selected-date-gear"><i class="fas fa-cog"></i></button>
+                <button id="selected-date-gear" theme><i class="fas fa-cog"></i></button>
             </div>
-            <div class="looks" id="event">
-                <button id="add-event" onclick="openCloseAddEventForm('open');"><i class="fas fa-plus"></i></button>
+            <div class="looks" id="event" theme>
+                <button id="add-event" onclick="openCloseAddEventForm('open');" theme><i class="fas fa-plus"></i></button>
             </div>
             <div id="event-display-holder"></div>
         </div>
     </div>
 
-    <div id="add-event-form"> <!--add events-->
+    <div id="add-event-form" theme> <!--add events-->
         <div id="add-event-holder">
-            <div id="drag-bar">
-                <button id="close-add-event-form" onclick="openCloseAddEventForm('close');"><i class="fas fa-times"></i></button>
+            <div id="drag-bar" theme>
+                <button id="close-add-event-form" onclick="openCloseAddEventForm('close');" theme><i class="fas fa-times"></i></button>
             </div>
             
-            <input type="text" id="name-input" name="name" placeholder="Add name" spellcheck="false"/>
+            <input type="text" id="name-input" name="name" placeholder="Add name" spellcheck="false" theme/>
 
-            <span id="clock-icon"><i class="far fa-clock"></i></span>
-            <input type="date" id="date-input" name="date"/>
-            <input type="time" id="time-input" name="time" step="1"/> 
+            <span id="clock-icon" theme><i class="far fa-clock"></i></span>
+            <input type="date" id="date-input" name="date" theme/>
+            <input type="time" id="time-input" name="time" step="1" theme/> 
             
-            <span id="bars-icon"><i class="fas fa-bars"></i></span>
+            <span id="bars-icon" theme><i class="fas fa-bars"></i></span>
             <textarea name="textarea" id="description-input" placeholder="Add description"></textarea>
 
-            <button id="save-event" onclick="openCloseAddEventForm('close'); addModifyEventHandler('add');" i18n="save"></button>
+            <button id="save-event" onclick="openCloseAddEventForm('close'); addModifyEventHandler('add');" i18n="save" theme></button>
         </div>
     </div>
 
-    <div id="modify-event-form"> <!--modify events-->
+    <div id="modify-event-form" theme> <!--modify events-->
         <div id="modify-event-holder">
-            <div id="drag-bar">
-                <button id="close-modify-event-form" onclick="openCloseAddEventForm('close');"><i class="fas fa-times"></i></button>
+            <div id="drag-bar" theme>
+                <button id="close-modify-event-form" onclick="openCloseAddEventForm('close');" theme><i class="fas fa-times"></i></button>
             </div>
             
-            <input type="text" id="modify-name-input" name="name" placeholder="Add name" spellcheck="false"/>
+            <input type="text" id="modify-name-input" name="name" placeholder="Add name" spellcheck="false" theme/>
 
-            <span id="clock-icon"><i class="far fa-clock"></i></span>
-            <input type="date" id="modify-date-input" name="date"/>
-            <input type="time" id="modify-time-input" name="time" step="1"/>
+            <span id="clock-icon" theme><i class="far fa-clock"></i></span>
+            <input type="date" id="modify-date-input" name="date" theme/>
+            <input type="time" id="modify-time-input" name="time" step="1" theme/>
             
-            <span id="bars-icon"><i class="fas fa-bars"></i></span>
+            <span id="bars-icon" theme><i class="fas fa-bars"></i></span>
             <textarea name="textarea" id="modify-description-input" placeholder="Add description"></textarea>
 
-            <button id="modify-save-event" onclick="openCloseAddEventForm('close'); addModifyEventHandler('modify', 0);" i18n="save"></button>
+            <button id="modify-save-event" onclick="openCloseAddEventForm('close'); addModifyEventHandler('modify', 0);" i18n="save" theme></button>
         </div>
     </div>
 
-    <div id="prompt"></div>
+    <div id="prompt" theme></div>
 
-    <button id="language-change">EN</button>
+    <button id="language-change" theme>EN</button>
+
+    <div id="theme-toggle-holder">
+        <input type="checkbox" class="toggle-checkbox" id="theme-toggle-chk"/>
+        <label class="toggle-label" for="theme-toggle-chk">
+            <i class="fas fa-moon fa-sm theme-toggle-fa-moon"></i>
+            <i class="fas fa-sun fa-sm theme-toggle-fa-sun"></i>
+            <div class="toggle-ball"></div>
+        </label>
+    </div>
+
 </body>
 </html>

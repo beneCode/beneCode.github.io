@@ -1,0 +1,251 @@
+/*calendar css*/
+
+.looks
+{
+    background-color: rgb(236,236,236);
+    border: 1px solid rgb(208,208,208);
+    color: black;
+}
+
+.looks.dark
+{
+    background-color: rgb(40,40,40);
+    border: 1px solid rgb(150,150,150);
+    color: honeydew;
+}
+
+#selected-date-gear
+{
+    color: black;
+}
+
+#selected-date-gear.dark
+{
+    color: rgb(150,150,150);
+}
+
+
+#add-event
+{
+    color: black;
+
+    background-color: rgb(236,236,236);
+    border: 1px solid rgb(208,208,208);
+}
+
+#add-event.dark
+{
+    color: rgb(150,150,150);
+
+    background-color: rgb(40,40,40);
+    border: 1px solid rgb(150,150,150);
+}
+
+.day:hover
+{ 
+    border: 2px solid rgb(208,208,208);
+}
+
+.day.dark:hover
+{ 
+    border: 2px solid rgb(150,150,150);
+}
+
+.day:focus
+{
+    border: 2px solid rgb(0,137,123);
+}
+
+.day_last_next_month
+{
+    color: rgb(90, 90, 90);
+}
+
+.button-up-down
+{
+    color: black;
+}
+
+.button-up-down.dark
+{
+    color: honeydew;
+}
+
+#prompt
+{
+    background-color: rgb(225,225,225);
+    border: 1px solid rgb(208,208,208);
+    color: black;
+}
+
+#prompt.dark
+{
+    background-color: rgb(40,40,40);
+    border: 1px solid rgb(150,150,150);
+    color: rgb(150,150,150);
+}
+
+#close-prompt
+{
+    color: black;
+}
+
+#close-prompt.dark
+{
+    color: rgb(150,150,150);
+}
+
+#language-change
+{
+    color: black;
+}
+
+#language-change.dark
+{
+    color: rgb(150,150,150);
+}
+
+html, body
+{
+    background-color: rgb(225,225,225);
+}
+
+html.dark, body.dark
+{
+    background-color: rgb(54,54,54);
+}
+
+/*add event form css*/
+
+#add-event-form, #modify-event-form
+{
+    color: black;
+    background-color: rgb(225,225,225);
+    border: 1px solid rgb(208,208,208);
+}
+
+#add-event-form.dark, #modify-event-form.dark
+{
+    color: honeydew;
+    background-color: rgb(40,40,40);
+    border: 1px solid rgb(150,150,150);
+}
+
+#drag-bar
+{
+    background-color: rgb(208,208,208);
+}
+
+#drag-bar.dark
+{
+    background-color: rgb(54,54,54);
+}
+
+#close-add-event-form, #close-modify-event-form
+{
+    color: black;
+}
+
+#close-add-event-form.dark, #close-modify-event-form.dark
+{
+    color: rgb(150,150,150);
+}
+
+#name-input, #modify-name-input
+{
+
+    border-bottom: 1px solid rgb(150,150,150);
+    color: black;
+}
+
+#name-input.dark, #modify-name-input.dark
+{
+
+    border-bottom: 1px solid rgb(150,150,150);
+    color: rgb(150,150,150);
+}
+
+#clock-icon
+{
+    color: black;
+}
+
+#clock-icon.dark
+{
+    color: rgb(150,150,150);
+}
+
+#date-input:hover, #modify-date-input:hover
+{
+    background-color: rgb(208,208,208);
+}
+
+#time-input:hover, #modify-time-input:hover
+{
+    background-color: rgb(208,208,208);
+}
+
+#date-input.dark:hover, #modify-date-input.dark:hover
+{
+    background-color: rgb(54,54,54);
+}
+
+#time-input.dark:hover, #modify-time-input.dark:hover
+{
+    background-color: rgb(54,54,54);
+}
+
+#bars-icon
+{
+    color: black;
+}
+
+#bars-icon.dark
+{
+    color: rgb(150,150,150);
+}
+
+#save-event, #modify-save-event
+{
+    color: black;
+}
+
+#save-event.dark, #modify-save-event.dark
+{
+    color: honeydew;
+}
+
+/*event display holder css*/
+
+.event-display
+{
+    color: black;
+    background-color: rgb(225,225,225);
+    border: 1px solid rgb(208,208,208);
+}
+
+.event-display.dark
+{
+    color: rgb(150,150,150);
+    background-color: rgb(54,54,54);
+    border: 1px solid rgb(150,150,150);
+}
+
+.event-display-modify
+{
+    color: black;
+}
+
+.event-display-delete
+{
+    color: black;
+}
+.event-display-modify.dark
+{
+    color: rgb(150,150,150);
+}
+
+.event-display-delete.dark
+{
+    color: rgb(150,150,150);
+}

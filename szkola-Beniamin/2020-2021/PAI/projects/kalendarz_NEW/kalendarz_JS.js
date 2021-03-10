@@ -190,11 +190,11 @@ class Calendar
             {
                 document.getElementById("event-display-holder").innerHTML +=
                 `
-                    <div class="event-display">
+                    <div class="event-display ${getTheme()}" theme>
                         <div class="event-display-name-holder">
                             <div class="event-display-name">${this.events[i].name}</div>
-                            <button class="event-display-modify" onclick="openCloseAddEventForm('modify_open', ${i});"><i class="fas fa-pen"></i></button>
-                            <button class="event-display-delete" onclick="deleteEvent(${i});"><i class="fas fa-times"></i></button>
+                            <button class="event-display-modify ${getTheme()}" onclick="openCloseAddEventForm('modify_open', ${i});" theme><i class="fas fa-pen"></i></button>
+                            <button class="event-display-delete ${getTheme()}" onclick="deleteEvent(${i});" theme><i class="fas fa-times"></i></button>
                             <br>
                             ${this.events[i].description}
                         </div>
@@ -312,7 +312,7 @@ class Event
                     <span id="prompt-name">${this.name}</span><br>
                     ${this.description}
                 </div>
-                <button id="close-prompt" onclick="closePrompt()"><i class="fas fa-times"></i></button>
+                <button id="close-prompt" onclick="closePrompt()" theme><i class="fas fa-times"></i></button>
             `
             document.getElementById("prompt").style.display = "block";
 
