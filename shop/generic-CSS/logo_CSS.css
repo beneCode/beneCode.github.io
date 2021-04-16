@@ -1,0 +1,27 @@
+#logo
+{
+    position: relative;
+    transition: 0.6s;
+
+    max-width: 10em;
+    stroke: #FD4444;
+    stroke-linecap: round;
+    fill: none;
+    stroke-width: 7%;
+    margin: 0px;
+
+    display: block;
+}
+
+#logo use
+{
+    animation: animate 4s linear infinite;
+}
+
+@keyframes animate
+{
+    to
+    {
+        stroke-dashoffset: 0px;
+    }
+}

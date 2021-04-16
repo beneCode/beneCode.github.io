@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shop</title>
+
+    <script src="https://kit.fontawesome.com/a6e2755b4d.js" crossorigin="anonymous"></script>
+    
+    <script src="./generic-JS/logo_JS.js" defer></script>
+
+    <link rel="stylesheet" href="./generic-CSS/nav_bar_CSS.css">
+    <link rel="stylesheet" href="./generic-CSS/logo_CSS.css">
+
+</head>
+<body>
+    <a href="./index.html" id="logo-link"></a>
+    
+    <header id="nav-bar">
+        <svg id="logo" viewBox="-2000 -1000 4000 2000">
+            <defs>
+                <linearGradient id="gradient" y1="30%" y2="40%" y3="100%">
+                    <stop stop-color="#fd8585" offset="30%"/>
+                    <stop stop-color="#FD4444" offset="40%"/>
+                    <stop stop-color="#fd8585" offset="100%"/>
+                </linearGradient>
+            </defs>
+
+            <path id="stroke" d="M354-354A500 500 0 1 1 354 354L-354-354A500 500 0 1 0-354 354z"></path>
+            <use xlink:href="#stroke" stroke-dasharray="1570 5143" stroke-dashoffset="6713px" stroke="url(#gradient)"></use>    
+        </svg>
+
+        <ul class="holder">
+            <li class="holder-li"><a class="holder-a" href="#">Konto</a>
+                <ul class="lower-holder">
+                    <li class="lower-holder-li"><a class="lower-holder-a" href="#">Zaloguj</a></li>
+                    <li class="lower-holder-li"><a class="lower-holder-a" href="#">Zajereestruj</a></li>
+                </ul>
+            </li>
+
+            <li class="holder-li"><a class="holder-a" href="#">Koszyk</a>
+                <ul class="lower-holder">
+                    <li class="lower-holder-li"><a class="lower-holder-a" href="#">Item 1</a></li>
+                    <li class="lower-holder-li"><a class="lower-holder-a" href="#">Item 2</a></li>
+                </ul>
+            </li>
+        </ul>
+    </header>
+</body>
+</html>
