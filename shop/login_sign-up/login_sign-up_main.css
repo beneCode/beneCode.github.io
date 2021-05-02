@@ -46,6 +46,8 @@ body
 
 #middle-wraper
 {
+    position: relative;
+
     background-color: transparent; 
     height: 100%; 
     width: 50%; 
@@ -55,14 +57,113 @@ body
     align-items: center;
 }
 
+#middle-wraper button
+{
+    position: absolute;
+    bottom: 15px;
+    left: 15px;
+
+    height: 35px;
+    width: 95px;
+
+    border: none;
+    outline: none;
+    background-color: #484F5C;
+    color: #fff;
+    border-radius: 20px;
+
+    cursor: pointer;
+}
+
 #sign-up_form
 {
+    position: relative;
+
     height: 50%;
     width: 40%;
 
     border: 2px solid #484F5C;
     border-radius: 15px;
     box-shadow: 5px 5px 5px #00000052;
+
+    text-align: center;
+}
+
+#sign-up_form div
+{
+    color: #fff;
+    font-size: 30px;
+    margin-top: 15px;
+    margin-left: 35px;
+    text-align: left;
+}
+
+#sign-up_form input
+{
+    margin-top: 15px;
+    margin-bottom: 15px;
+    padding-left: 15px;
+
+    height: 35px;
+
+    color: #fff;
+  
+    border-radius: 20px;
+    outline: none;
+}
+
+.input-color
+{
+    width: 80%;
+    background-color: transparent;
+    border: 1px solid #484F5C;
+}
+
+#submit
+{
+    width: 85%;
+
+    cursor: pointer;
+
+    border: none;
+    color: #ffffff;
+    background-color: #FD4444;
+}
+
+#submit:hover
+{
+    background-color: #d13939;
+}
+
+#sign-up_form span
+{
+    position: absolute;
+    bottom: -35px;
+    left: -50%;
+    transform: translate(50%);
+
+    width: 100%;
+
+    text-align: center;
+
+    color: #fff;
+}
+
+#sign-up_form span a:link, a:visited 
+{
+    color: #FD4444;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  
+#sign-up_form span a:link:active, a:visited:active
+{
+    color: #FD4444;
+}
+
+#sign-up_form span a:hover
+{
+    color: #d13939;
 }
 
 #dlaczego
@@ -80,7 +181,7 @@ body
 
 #dlaczego h1
 {
-    font-size: 25px;
+    font-size: 22px;
 }
 
 #dlaczego div
