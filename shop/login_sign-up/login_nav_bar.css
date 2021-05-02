@@ -1,0 +1,63 @@
+.lower-holder-li button
+{
+    width: 100%;
+    height: 33px;
+    outline: none;
+    border: none;
+    border-radius: 100px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+#button-zaloguj
+{
+    color: #ffffff;
+    background-color: #FD4444;
+}
+
+#button-zaloguj:hover
+{
+    background-color: #d13939;
+}
+
+#button-zajerestruj
+{
+    border: 1px solid #FD4444;
+    color: #FD4444;
+    background-color: transparent;
+}
+
+#button-zajerestruj:hover
+{
+    border: 1px solid #d13939;
+    color: #ffffff;
+    background-color: #d13939;
+}
+
+#logowanie-div-li
+{
+    height: 0px;
+}
+
+#logowanie-div
+{
+    width: 100%;
+    height: 0px;
+    border-top: 1px solid #484F5C;
+    position: relative;
+}
+
+#logowanie-div div
+{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); 
+
+    width: 70%;
+
+    text-align: center;
+    font-weight: 200;
+    color: #484F5C;
+    background-color: #0D0E11;
+}

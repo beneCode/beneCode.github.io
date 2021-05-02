@@ -19,7 +19,7 @@ html, body
     left: 0;
     top: 0;
 
-    z-index: 10000;
+    z-index: 1000;
 
     width: 100%;
     min-height: 80px;
@@ -29,15 +29,15 @@ html, body
     align-items: center;
     transition: 0.6s;
 
-    padding: 0px 100px;
+    padding: 0px 400px;
 
     background-color: #0D0E11;
 }
 
-.holder-li .holder-a, .lower-holder-li .lower-holder-a
+.holder-li .holder-a, .lower-holder-li
 {
     position: relative;
-    margin: 0px 15px;
+    margin: 0px 25px;
     text-decoration: none;
     color: #ffffff;
     letter-spacing: 2px;
@@ -65,6 +65,8 @@ html, body
     display: flex;
     justify-content: left;
     align-items: center;   
+
+    height: 80px;
 }
 
 .lower-holder
@@ -75,27 +77,27 @@ html, body
     align-items: left;
 
     left: 50%;
-    transform: translate(-26%, -1%);
+    transform: translate(-17.5%, -0%);
     top: 80px;
+    z-index: 10000;
 
     background-color: #0D0E11;
 
-    border-bottom: 1px solid #484F5C;
-    border-left: 1px solid #484F5C;
-    border-right: 1px solid #484F5C;
+    border-bottom: 2px solid #484F5C;
+    border-left: 2px solid #484F5C;
+    border-right: 2px solid #484F5C;
 
     border-radius: 0px 10px 10px 10px;
 
-    width: 200%;
+    width: 300%;
 }
 
 .holder-li:hover
 {
-    border-top: 1px solid #484F5C;
-    border-left: 1px solid #484F5C;
-    border-right: 1px solid #484F5C;
+    border-left: 2px solid #484F5C;
+    border-right: 2px solid #484F5C;
 
-    border-radius: 10px 10px 0px 0px;
+    border-radius: 0px;
 }
 
 .holder-li:hover .lower-holder
@@ -103,24 +105,7 @@ html, body
     display: block;
 }
 
-.holder-li:hover .holder-a, .lower-holder-li:hover .lower-holder-a
+.holder-li:hover .holder-a, .lower-holder-li:hover
 {
     color: #FD4444;
-}
-
-::-webkit-scrollbar 
-{
-    width: 12px;
-}
-  
-::-webkit-scrollbar-track
-{
-    background-color: #15171F;
-}
-  
-::-webkit-scrollbar-thumb 
-{
-    background-color: #484F5C; 
-    border-radius: 5px; 
-    border: 1px solid #15171F;
 }

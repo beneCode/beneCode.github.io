@@ -8,10 +8,12 @@
 
     <script src="https://kit.fontawesome.com/a6e2755b4d.js" crossorigin="anonymous"></script>
     
-    <script src="./generic-JS/logo_JS.js" defer></script>
+    <script src="./JS/logo_JS.js" defer></script>
 
-    <link rel="stylesheet" href="./generic-CSS/nav_bar_CSS.css">
-    <link rel="stylesheet" href="./generic-CSS/logo_CSS.css">
+    <link rel="stylesheet" href="./CSS/nav_bar_CSS.css">
+    <link rel="stylesheet" href="./CSS/logo_CSS.css">
+    <link rel="stylesheet" href="./login_sign-up/login_nav_bar.css">
+    <link rel="stylesheet" href="./CSS/scroll-bar.css">
 
 </head>
 <body>
@@ -34,15 +36,16 @@
         <ul class="holder">
             <li class="holder-li"><a class="holder-a" href="#">Konto</a>
                 <ul class="lower-holder">
-                    <li class="lower-holder-li"><a class="lower-holder-a" href="#">Zaloguj</a></li>
-                    <li class="lower-holder-li"><a class="lower-holder-a" href="#">Zajereestruj</a></li>
+                    <li class="lower-holder-li"><button id="button-zaloguj">Zaloguj się</button></li>
+                    <li class="lower-holder-li" id="logowanie-div-li"><div id="logowanie-div"><div>Nie masz konta?</div></div></li>
+                    <li class="lower-holder-li"><button onClick="window.location='./login_sign-up/sign-up/sign-up.html';" id="button-zajerestruj">Załóż konto</button></li>
                 </ul>
             </li>
 
             <li class="holder-li"><a class="holder-a" href="#">Koszyk</a>
                 <ul class="lower-holder">
-                    <li class="lower-holder-li"><a class="lower-holder-a" href="#">Item 1</a></li>
-                    <li class="lower-holder-li"><a class="lower-holder-a" href="#">Item 2</a></li>
+                    <li class="lower-holder-li">Item 1</li>
+                    <li class="lower-holder-li">Item 2</li>
                 </ul>
             </li>
         </ul>
