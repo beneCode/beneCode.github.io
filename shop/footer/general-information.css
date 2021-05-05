@@ -1,0 +1,48 @@
+.information
+{
+    float: left;
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 0%;
+    padding: 10px 10px 10px 10px; 
+    margin-left: 180px;
+    font-size: 20px;
+}
+
+@media only screen and (min-width:1080px)
+{
+   .information{
+    padding: 0px 8px;
+   }
+}
+
+
+@media only screen and (min-width:150px)
+{
+   .general-information{
+    display: flex;
+    flex-direction: row;
+    flex: 3 1 1%;
+   }
+}
+
+.orders_4
+{
+    text-decoration: none;
+    color: white;
+}
+
+.orders_1
+{
+    color: #FD4444;
+}
+
+.orders_2
+{
+    list-style-type: none;
+}
+
+
+
+
+
