@@ -10,6 +10,8 @@
     <link rel="stylesheet" href="./../../CSS/logo_CSS.css">
     <link rel="stylesheet" href="./../../CSS/scroll-bar.css">
 
+    <script src="./js/check_alerts.js"></script>
+
 </head>
 <body>
     <div id="top">
@@ -33,9 +35,10 @@
         <div id="middle-wraper">
             <div id="sign-up_form">
                 <div>Zaloguj się</div>
-                <form id="sign-up-form" action="">
-                    <input class="input" type="text" placeholder="E-mail">
-                    <input class="input" type="password" placeholder="Hasło">
+                <form id="sign-up-form" action="./../../php/index.php">
+                    <input class="input" type="email" name="email" placeholder="E-mail" required>
+                    <input class="input" type="password" name="password" placeholder="Hasło" required>
+                    <input type="hidden" name="mode" value="./../login_sign-up/login/php/login">
                     <button id="submit">Zaloguj się</button>
                 </form>
                 <span>Nie masz konta? <a href="./../sign-up/sign-up.html">Załóż konto</a></span>
