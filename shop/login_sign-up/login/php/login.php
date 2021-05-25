@@ -1,6 +1,6 @@
 <?php
-    require_once('./dane_bazy_danych/db_connect.php');
-    require_once('./dane_bazy_danych/db_connect.php');
+    require_once('./php/dane_bazy_danych/db_connect.php');
+    require_once('./php/dane_bazy_danych/db_connect.php');
 
     //łączenie z bazą
     $connect = getConnect($host, $user, $password, $db);
@@ -15,10 +15,10 @@
     {
         echo<<<html
             <script>
-                localStorage.zly_email=true;
+                localStorage.zly_email=1;
+                window.location.replace("./login_sign-up/login/login.html");
             </script>
         html;
-        header('Location:./../login_sign-up/login/login.html');
     }
     else
     {
@@ -26,17 +26,18 @@
         {
             echo<<<html
                 <script>
-                    localStorage.zly_haslo=true;
+                    localStorage.zly_haslo=1;
+                    window.location.replace("./login_sign-up/login/login.html");
                 </script>
             html;
-            header('Location:./../login_sign-up/login/login.html');
         }
         else
         {
             echo<<<html
-                zalogowano
+                <script>
+                    alert('witamy $result->name');
+                </script>
             html;
-            //header('Location:./../index.html');
         }
     }
 ?>

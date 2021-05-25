@@ -12,16 +12,44 @@
 
     <link rel="stylesheet" href="./CSS/nav_bar_CSS.css">
     <link rel="stylesheet" href="./CSS/logo_CSS.css">
+
     <link rel="stylesheet" href="./login_sign-up/login_nav_bar.css">
+    
     <link rel="stylesheet" href="./CSS/scroll-bar.css">
+    
     <link rel="stylesheet" href="./footer/footer.css">
     <link rel="stylesheet" href="./footer/footer-general.css">
     <link rel="stylesheet" href="./footer/general-information.css">
 
+    <?php
+        require_once('./php/dane_bazy_danych/db_info.php');
+        require_once('./php/dane_bazy_danych/db_connect.php');
+
+        //łączenie z bazą
+        $connect = getConnect($host, $user, $password, $db);
+
+        //ustawienie zestawu znaków klienta
+        $connect->set_charset('utf8');
+
+        if(ISSET($_GET['mode']))
+        {
+            if(FILE_EXISTS("{$_GET['mode']}.php"))
+            {
+                include("{$_GET['mode']}.php");
+            }
+            else
+            {
+                echo "nie ma takiego pliku";
+            }
+        }
+            
+        //zamykanie połączenia z bazą
+        disConnect($connect);
+    ?>
 
 </head>
 <body>
-    <a href="./index.html" id="logo-link"></a>
+    <a href="./index.php" id="logo-link"></a>
     
     <header id="nav-bar">
         <svg id="logo" viewBox="-2000 -1000 4000 2000">

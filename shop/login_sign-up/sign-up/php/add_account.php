@@ -1,6 +1,6 @@
 <?php
-    require_once('./dane_bazy_danych/db_connect.php');
-    require_once('./dane_bazy_danych/db_connect.php');
+    require_once('./php/dane_bazy_danych/db_connect.php');
+    require_once('./php/dane_bazy_danych/db_connect.php');
 
     //łączenie z bazą
     $connect = getConnect($host, $user, $password, $db);

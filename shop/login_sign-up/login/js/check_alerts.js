@@ -1,14 +1,12 @@
-localStorage.zly_email=false;
-localStorage.zly_haslo=false;
-
-if(localStorage.zly_email==true)
+if(localStorage.zly_email == 1)
 {
     alert('zły email');
-    localStorage.zly_email=false;
 }
 
-if(localStorage.zly_haslo==true)
+if(localStorage.zly_haslo == 1)
 {
     alert('złe hasło');
-    localStorage.zly_haslo=false;
 }
+
+localStorage.zly_email=0;
+localStorage.zly_haslo=0;
