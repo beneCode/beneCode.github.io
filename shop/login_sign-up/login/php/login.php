@@ -35,7 +35,9 @@
         {
             echo<<<html
                 <script>
-                    alert('witamy $result->name');
+
+                    var account = new Account($result->account_id, '$result->name', '$result->surename', '$result->email', '$result->password', $result->isAdmin);
+
                 </script>
             html;
         }

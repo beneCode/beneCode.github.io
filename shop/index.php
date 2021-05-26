@@ -6,9 +6,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Shop</title>
 
+    <a href="./index.php" id="logo-link"></a> <!--link dla logo-->
+
     <script src="https://kit.fontawesome.com/a6e2755b4d.js" crossorigin="anonymous"></script>
     
-    <script src="./JS/logo_JS.js" defer></script>
+    <script src="./js/logo_JS.js" defer></script>
+
+    <script src="./js/account.js"></script>
+    <script src="./js/account_JSON_handler.js"></script>
+    <script src="./js/account_logout.js" defer></script>
 
     <link rel="stylesheet" href="./CSS/nav_bar_CSS.css">
     <link rel="stylesheet" href="./CSS/logo_CSS.css">
@@ -46,11 +52,8 @@
         //zamykanie połączenia z bazą
         disConnect($connect);
     ?>
-
 </head>
 <body>
-    <a href="./index.php" id="logo-link"></a>
-    
     <header id="nav-bar">
         <svg id="logo" viewBox="-2000 -1000 4000 2000">
             <defs>
@@ -66,11 +69,14 @@
         </svg>
 
         <ul class="holder">
-            <li class="holder-li"><a class="holder-a" href="#">Konto</a>
+            <li class="holder-li"><a class="holder-a" href="#" id="cos">Konto</a> <!-- delet the id  cos later -->
                 <ul class="lower-holder">
                     <li class="lower-holder-li"><button onClick="window.location='./login_sign-up/login/login.html';" id="button-zaloguj">Zaloguj się</button></li>
                     <li class="lower-holder-li" id="logowanie-div-li"><div id="logowanie-div"><div>Nie masz konta?</div></div></li>
                     <li class="lower-holder-li"><button onClick="window.location='./login_sign-up/sign-up/sign-up.html';" id="button-zajerestruj">Załóż konto</button></li>
+
+                    <li class="lower-holder-li"><button id="button-wyloguj">wyloguj</button></li>
+
                 </ul>
             </li>
 
@@ -82,6 +88,12 @@
             </li>
         </ul>
     </header>
+
+
+    <script> //temporary change the name, delete id cos linia 71
+        if("account" in window)
+            document.getElementById("cos").innerHTML=account.name;     
+    </script>
 
 </body>
 
@@ -168,6 +180,5 @@
 
         </div>
     </div>
-
 </footer>
 </html>

@@ -11,7 +11,7 @@
     $query="INSERT INTO account (name, surename, email, password, isAdmin) VALUES ('{$_GET['name']}', '{$_GET['surename']}', '{$_GET['email']}', '{$_GET['password']}', 0)";
 
     $connect->query($query);
-    header('Location:./../index.html');
+    header('Location:./index.php');
 
     //zamykanie połączenia z bazą
     disConnect($connect);
