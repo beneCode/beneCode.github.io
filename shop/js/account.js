@@ -17,8 +17,15 @@ class Account
             this.isAdmin = true;
         }
 
-        localStorage.isLoggedIn = true;
+        localStorage.isLoggedIn = 1;
 
         saveAccountToJSON(this);
+
+        if(localStorage.isFromIndexPHP == 1)
+        {
+            localStorage.isFromIndexPHP = 0;
+            let mainLink = document.querySelector('#logo-link');
+            mainLink.click();
+        }
     }
 }

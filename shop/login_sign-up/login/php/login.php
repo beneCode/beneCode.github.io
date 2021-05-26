@@ -36,6 +36,7 @@
             echo<<<html
                 <script>
 
+                    localStorage.isFromIndexPHP = 1;
                     var account = new Account($result->account_id, '$result->name', '$result->surename', '$result->email', '$result->password', $result->isAdmin);
 
                 </script>

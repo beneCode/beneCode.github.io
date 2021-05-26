@@ -1,4 +1,4 @@
-var isLoggedIn = localStorage.isLoggedIn ?? (localStorage.isLoggedIn = false);
+var isLoggedIn = localStorage.isLoggedIn ?? (localStorage.isLoggedIn = 0);
 
 var account;
 
@@ -26,7 +26,7 @@ function parseJSONToAccount()
     account = new Account(acc.account_id, acc.name, acc.surename, acc.email, acc.password, acc.isAdmin);
 }
 
-if(isLoggedIn)
-{
+if(isLoggedIn == 1)
+{ 
     parseJSONToAccount();
 }
