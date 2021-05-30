@@ -135,6 +135,14 @@ body
     background-color: #d13939;
 }
 
+#sign-up_form-p
+{
+    color: #FD4444;
+    text-align: left;
+    padding-left: 50px;
+    display: none;
+}
+
 #sign-up_form span
 {
     position: absolute;

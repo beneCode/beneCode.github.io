@@ -15,7 +15,7 @@
     {
         echo<<<html
             <script>
-                localStorage.zly_email=1;
+                localStorage.blad_logowania=1;
                 window.location.replace("./login_sign-up/login/login.html");
             </script>
         html;
@@ -26,7 +26,7 @@
         {
             echo<<<html
                 <script>
-                    localStorage.zly_haslo=1;
+                    localStorage.blad_logowania=1;
                     window.location.replace("./login_sign-up/login/login.html");
                 </script>
             html;
