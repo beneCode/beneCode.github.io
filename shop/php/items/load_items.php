@@ -1,5 +1,5 @@
 <script src="./../../js/items/item.js"></script>
-<script src="./../../js/items/load_items.js"></script>
+<script src="./../../js/items/item_JSON_handler.js"></script>
 
 <?php
     require_once('./../dane_bazy_danych/db_info.php');
@@ -23,6 +23,15 @@
             items[$row->item_id] = new Item($row->item_id, '$row->name', $row->price, '$row->info', $row->amount, '$row->picture');
         html;
     }
+
+    echo<<<html
+        saveItemsToJSON(items);
+
+        localStorage.items_load_first = 0;
+
+        window.location.href = "./../../index.html";
+
+    html;
 
     echo "</script>";
 

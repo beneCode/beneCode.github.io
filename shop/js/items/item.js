@@ -1,3 +1,5 @@
+var items = new Array(100);
+
 class Item
 {
     constructor(item_id, name, price, info, amount, picture)

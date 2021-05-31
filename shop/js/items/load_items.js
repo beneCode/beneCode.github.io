@@ -1,3 +1,8 @@
-var items = new Array(1000);
+localStorage.items_load_first ?? (localStorage.items_load_first = 1);
 
-console.log(items);
+if(localStorage.items_load_first == 1)
+{
+    window.location.href = "./php/items/load_items.php";
+}
+
+localStorage.items_load_first = 1;
