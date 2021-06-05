@@ -1,0 +1,79 @@
+.item-basket
+{
+    position: relative;
+
+    width: 100%;
+    height: 100%;
+
+    border-bottom: 1px solid #484F5C;
+}
+
+.item-basket-picture
+{
+    position: absolute;
+
+    left: 0;
+    top: 5px;
+
+    height: 70px;
+    width: 25%;
+}
+
+.item-basket-picture img
+{
+    width: 100%;
+    height: 100%;
+}
+
+.item-basket-name
+{
+    position: absolute;
+
+    right: 10%;
+    top: 10px;
+
+    width: 65%;
+}
+
+.item-basket-price
+{
+    position: absolute;
+
+    right: 20%;
+    bottom: 5px;
+
+    width: auto;
+    height: auto;
+
+    color: #fff;  
+}
+
+.item-delete-from-basket
+{
+    position: absolute;
+
+    right: 0;
+    bottom: 24px;
+
+    width: 32px;
+    height: 32px;
+}
+
+.item-delete-from-basket button
+{
+    outline: none;
+    background-color: transparent;
+    border: none; 
+    
+    width: 100%;
+    height: 100%;
+}
+
+.item-delete-from-basket svg
+{
+    width: 100%;
+    height: 100%;
+
+    text-align: center;
+    fill: #FD4444;
+}

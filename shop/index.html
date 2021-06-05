@@ -20,6 +20,12 @@
     <script src="./js/items/item.js"></script>
     <script src="./js/items/item_JSON_handler.js"></script>
 
+    <script src="./js/items/select_items_to_print.js" defer></script>
+
+    <script src="./js/basket/basket_JSON_handler.js"></script>
+    <script src="./js/basket/basket.js"></script>
+    <script src="./js/basket/print_basket.js" defer></script>
+
     <link rel="stylesheet" href="./CSS/nav_bar_CSS.css">
     <link rel="stylesheet" href="./CSS/logo_CSS.css">
 
@@ -31,7 +37,11 @@
     <link rel="stylesheet" href="./footer/footer-general.css">
     <link rel="stylesheet" href="./footer/general-information.css">
 
-    <link rel="stylesheet" href=".//item/item.css">
+    <link rel="stylesheet" href="./css/items/main-item.css">
+    <link rel="stylesheet" href="./css/items/item.css">
+
+    <link rel="stylesheet" href="./css/basket/main-basket.css">
+    <link rel="stylesheet" href="./css/basket/item-basket.css">
 
 </head>
 <body>
@@ -62,52 +72,80 @@
             </li>
 
             <li class="holder-li"><a class="holder-a" href="#">Koszyk</a>
-                <ul class="lower-holder">
-                    <li class="lower-holder-li">Item 1</li>
-                    <li class="lower-holder-li">Item 2</li>
+                <ul class="lower-holder" id="basket-holder">
+                    <li class="lower-holder-li" id="empty-basket">Twój koszyk jest pusty</li>
+                    <!-- <li class="lower-holder-li" > //item basket tamplate
+                        <div class="item-basket">
+                            <div class="item-basket-picture">
+                                <img src="./img/iphone.png" alt="iphone">
+                            </div>
+            
+                            <div class="item-basket-name">
+                                Apple iPhone 12 64GB White 5G
+                            </div>
+            
+                            <div class="item-basket-price">
+                                3 949,00 zł
+                            </div>
+
+                            <div class="item-delete-from-basket">
+                                <button>
+                                    <svg style="width: 100%;height: 100%;" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                        <g fill-rule="evenodd">
+                                            <path d="M8 7v12h8V7H8zM7 6h10v14H7V6z" fill-rule="nonzero"></path>
+                                            <path d="M10 5v1h4V5h-4zM9 4h6v3H9V4z" fill-rule="nonzero"></path>
+                                            <path d="M10 9h1v7h-1zM13 9h1v7h-1zM6 6h12v1H6z"></path>
+                                        </g>
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                    </li> -->
                 </ul>
             </li>
         </ul>
     </header>
 
-    <div class="promotions"><p>Promocja</p>
-    
-        <div class="item">
+    <div id="main-item-holder">
+        <div id="item-recomended-holder">
+            <!-- <div class="item">    //item tamplate
+                <div class="item-picture">
+                    <img src="./img/iphone.png" alt="iphone">
+                </div>
 
-            <div class="picture">
-                <img src="" alt="smartfon" class="img-1">
-            </div>
+                <div class="item-name">
+                    Apple iPhone 12 64GB White 5G
+                </div>
 
-            <div class="add_favourite">
-                <button class="favourite-button" title="Dodaj do ulubionych">
-                    <span class="favourite-span-1">
-                        <svg style="width: 100%; height:100%" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                            <path d="M12 19.57l6.905-7.052A3.832 3.832 0 0 0 20 9.814a3.833 3.833 0 0 0-1.096-2.704A3.634 3.634 0 0 0 16.286 6c-.99 0-1.916.392-2.62 1.11L12 8.812l-.714-.73-.952-.972A3.637 3.637 0 0 0 7.714 6c-.99 0-1.916.392-2.619 1.11A3.835 3.835 0 0 0 4 9.814c0 1.025.388 1.983 1.095 2.704L12 19.571zm0-12.187l.685-.7.267-.272A4.635 4.635 0 0 1 16.286 5c1.26 0 2.442.501 3.333 1.41A4.832 4.832 0 0 1 21 9.815c0 1.286-.49 2.495-1.381 3.404L12 21l-7.62-7.782A4.835 4.835 0 0 1 3 9.814c0-1.285.49-2.494 1.38-3.403A4.635 4.635 0 0 1 7.715 5c1.26 0 2.443.501 3.334 1.41l.252.258.7.715z"></path>
+                <div class="item-price">
+                    3 949,00 zł
+                </div>
+
+                <div class="item-add-to-basket">
+                    <button>
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
+                            <path d="M11 7h1a.5.5 0 1 1 0 1h-1v1a.5.5 0 1 1-1 0V8H9a.5.5 0 0 1 0-1h1V6a.5.5 0 1 1 1 0v1zM5.323 4H8a.5.5 0 0 1 0 1H5.532l1.25 6h7.314l1.286-6H13a.5.5 0 1 1 0-1h3a.5.5 0 0 1 .489.605l-1.5 7A.5.5 0 0 1 14.5 12H6.99l.417 2H14a2 2 0 1 1-1.733 1H8.733a2 2 0 1 1-2.329-.91L4.094 3H2.5a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .49.398L5.322 4zM8 16a1 1 0 1 0-1.999-.001A1 1 0 0 0 8 16zm7 0a1 1 0 1 0-1.999-.001A1 1 0 0 0 15 16z">
+                            </path>
                         </svg>
-                    </span>
-                </button>
-            </div>
+                    </button>
+                </div>
 
-            <div class="item_name">
-                <a title="smartfon" class="item_1" href="...">
-                    <h3>
-                        <span style="display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; visibility: visible; overflow: hidden; text-overflow: ellipsis; width: 100%;">Nazwa produktu</span>
-                    </h3>
-                </a>
-            </div>
-
-            <div class="item_price">
-                <span class="item_price_1">2000,00zł</span>
-                <span class="item_price_2">1000,00zł</span>
-            </div>
-
-            <div class="basket">
-
-            </div>
-
+                <div class="item-add-to-favourite">
+                    <button>
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                            <path d="M12 19.57l6.905-7.052A3.832 3.832 0 0 0 20 9.814a3.833 3.833 0 0 0-1.096-2.704A3.634 3.634 0 0 0 16.286 6c-.99 0-1.916.392-2.62 1.11L12 8.812l-.714-.73-.952-.972A3.637 3.637 0 0 0 7.714 6c-.99 0-1.916.392-2.619 1.11A3.835 3.835 0 0 0 4 9.814c0 1.025.388 1.983 1.095 2.704L12 19.571zm0-12.187l.685-.7.267-.272A4.635 4.635 0 0 1 16.286 5c1.26 0 2.442.501 3.333 1.41A4.832 4.832 0 0 1 21 9.815c0 1.286-.49 2.495-1.381 3.404L12 21l-7.62-7.782A4.835 4.835 0 0 1 3 9.814c0-1.285.49-2.494 1.38-3.403A4.635 4.635 0 0 1 7.715 5c1.26 0 2.443.501 3.334 1.41l.252.258.7.715z">
+                            </path>
+                        </svg>
+                    </button>
+                </div>
+            </div> -->
         </div>
-
-
+        <div id="item-sales-holder">
+            
+        </div>
+        <div id="item-for-you-holder">
+            
+        </div>
     </div>
 
     <script> //temporary change the name, delete id cos linia 71

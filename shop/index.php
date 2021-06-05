@@ -1,7 +1,7 @@
 <a href="./index.html" id="logo-link"></a> <!--link dla logo-->
 
-<script src="./js/account.js"></script>
-<script src="./js/account_JSON_handler.js"></script>
+<script src="./js/account/account.js"></script>
+<script src="./js/account/account_JSON_handler.js"></script>
 
 <?php
     require_once('./php/dane_bazy_danych/db_info.php');

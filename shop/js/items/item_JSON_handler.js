@@ -5,7 +5,7 @@ function saveItemsToJSON(items)
     localStorage.items = itemsJSON;
 }
 
-function parseJSONToAccount() 
+function parseJSONToItems() 
 {
     JSON.parse(localStorage.items).forEach(item => {
         if(item != null)
@@ -15,6 +15,6 @@ function parseJSONToAccount()
     });
 }
 
-parseJSONToAccount();
+parseJSONToItems();
 
 console.log(items);
