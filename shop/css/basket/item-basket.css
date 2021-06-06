@@ -8,6 +8,11 @@
     border-bottom: 1px solid #484F5C;
 }
 
+.item-basket-last
+{
+    border-bottom: none;
+}
+
 .item-basket-picture
 {
     position: absolute;
@@ -46,6 +51,19 @@
     height: auto;
 
     color: #fff;  
+}
+
+.item-basket-amount
+{
+    position: absolute;
+
+    left: 25%;
+    bottom: 5px;
+
+    width: auto;
+    height: auto;
+
+    color: #fff; 
 }
 
 .item-delete-from-basket

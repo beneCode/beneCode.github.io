@@ -15,7 +15,14 @@ function printBasket()
     }
 
     basket.forEach(item => {
-        basketHolder.innerHTML += items[item].PrintForBasket(basket_id);
+        if(basket_id < basket.length-1)
+        {
+            basketHolder.innerHTML += items[item.item_id].PrintForBasket(basket_id, "");
+        }
+        else
+        {
+            basketHolder.innerHTML += items[item.item_id].PrintForBasket(basket_id, "item-basket-last");
+        }
         basket_id++;
     });    
 }

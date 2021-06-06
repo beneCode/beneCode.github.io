@@ -49,11 +49,11 @@ class Item
         `;
     }
 
-    PrintForBasket(basket_id)
+    PrintForBasket(basket_id, isLast)
     {
         return `
             <li class="lower-holder-li" >
-                <div class="item-basket">
+                <div class="item-basket ${isLast}">
                     <div class="item-basket-picture">
                         <img src="./img/${this.picture}" alt="${this.picture}">
                     </div>
@@ -64,6 +64,10 @@ class Item
 
                     <div class="item-basket-price">
                         ${this.price} zł
+                    </div>
+
+                    <div class="item-basket-amount">
+                        ${basket[basket_id].amount} szt.
                     </div>
 
                     <div class="item-delete-from-basket">
