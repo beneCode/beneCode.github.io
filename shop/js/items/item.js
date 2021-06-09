@@ -16,8 +16,9 @@ class Item
     {
         return `
             <div class="item">
+                <div style="position: absolute; left: 0; top: 0; width: 100%; height: 100%;" onclick="redirect(${this.item_id});"></div>
                 <div class="item-picture">
-                    <img src="./img/${this.picture}" alt="${this.picture}">
+                    <img src="./${localStorage.location}img/${this.picture}" alt="${this.picture}">
                 </div>
 
                 <div class="item-name">
@@ -55,7 +56,7 @@ class Item
             <li class="lower-holder-li" >
                 <div class="item-basket ${isLast}">
                     <div class="item-basket-picture">
-                        <img src="./img/${this.picture}" alt="${this.picture}">
+                        <img src="./${localStorage.location}img/${this.picture}" alt="${this.picture}">
                     </div>
 
                     <div class="item-basket-name">
@@ -85,4 +86,58 @@ class Item
             </li>
         `;
     }
+
+    PrintForSubItemPage()
+    {
+        return `
+            <div class="sub-item-page">
+                <div class="sub-item-page-picture">
+                    <img src="./${localStorage.location}img/${this.picture}" alt="${this.picture}">
+                </div>
+
+                <div class="sub-item-page-name">
+                    ${this.name}
+                </div>
+
+                <div class="sub-item-page-price">
+                    ${this.price} zł
+                </div>
+
+                <div class="sub-item-page-descrpition">
+                    ${this.info}
+                </div>
+
+                <div class="item-select-amount">
+                    <select name="amount" id="amount-select">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                        <option value="9">9</option>
+                    </select>
+                </div>
+
+                <div class="item-add-to-basket">
+                    <button onclick="addToBasket(${this.item_id});">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
+                            <path d="M11 7h1a.5.5 0 1 1 0 1h-1v1a.5.5 0 1 1-1 0V8H9a.5.5 0 0 1 0-1h1V6a.5.5 0 1 1 1 0v1zM5.323 4H8a.5.5 0 0 1 0 1H5.532l1.25 6h7.314l1.286-6H13a.5.5 0 1 1 0-1h3a.5.5 0 0 1 .489.605l-1.5 7A.5.5 0 0 1 14.5 12H6.99l.417 2H14a2 2 0 1 1-1.733 1H8.733a2 2 0 1 1-2.329-.91L4.094 3H2.5a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .49.398L5.322 4zM8 16a1 1 0 1 0-1.999-.001A1 1 0 0 0 8 16zm7 0a1 1 0 1 0-1.999-.001A1 1 0 0 0 15 16z">
+                            </path>
+                        </svg>
+                        Dodaj do koszyka
+                    </button>
+                </div>
+            </div>
+        `;
+    }
+}
+
+function redirect(item_id) 
+{
+    localStorage.subPageItemId = item_id;
+    window.location.href = `./${localStorage.location}sub-item-page/sub-item-page.html`;
+    localStorage.location = "../";
 }

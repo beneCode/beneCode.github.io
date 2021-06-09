@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shop</title>
+
+    <a href="./../index.html" id="logo-link"></a> <!--link dla logo-->
+
+    <script src="https://kit.fontawesome.com/a6e2755b4d.js" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    
+    <script src="./../js/logo_JS.js" defer></script>
+
+    <script src="./../js/account/account.js"></script>
+    <script src="./../js/account/account_JSON_handler.js"></script>
+    <script src="./../js/account/account_logout.js" defer></script>
+
+    <script src="./../js/items/item.js"></script>
+    <script src="./../js/items/item_JSON_handler.js"></script>
+
+    <script src="./../js/basket/basket_JSON_handler.js"></script>
+    <script src="./../js/basket/basket.js" defer></script>
+    <script src="./../js/basket/print_basket.js" defer></script>
+
+    <script src="./../js/search-bar/search-bar.js" defer></script>
+
+    <script src="./sub-item-page.js" defer></script>
+
+    <link rel="stylesheet" href="./../CSS/nav_bar_CSS.css">
+    <link rel="stylesheet" href="./../CSS/logo_CSS.css">
+
+    <link rel="stylesheet" href="./../login_sign-up/login_nav_bar.css">
+    
+    <link rel="stylesheet" href="./../CSS/scroll-bar.css">
+    
+    <link rel="stylesheet" href="./../footer/general-information.css">
+
+    <link rel="stylesheet" href="./../css/items/main-item.css">
+
+    <link rel="stylesheet" href="./../css/basket/main-basket.css">
+    <link rel="stylesheet" href="./../css/basket/item-basket.css">
+
+    <script src="./../js/categories/categories.js"></script>
+    <script src="./../js/categories/categories_JSON_handler.js"></script>
+    <script src="./../js/categories/print-categories.js" defer></script>
+
+    <script src="./../js/categories/items_categories.js"></script>
+    <script src="./../js/categories/items_categories_JSON_handler.js"></script>
+
+    <link rel="stylesheet" href="./sub-item-page.css">
+
+</head>
+<body>
+    <header id="nav-bar">
+        <svg id="logo" viewBox="-2000 -1000 4000 2000">
+            <defs>
+                <linearGradient id="gradient" y1="30%" y2="40%" y3="100%">
+                    <stop stop-color="#fd8585" offset="30%"/>
+                    <stop stop-color="#FD4444" offset="40%"/>
+                    <stop stop-color="#fd8585" offset="100%"/>
+                </linearGradient>
+            </defs>
+
+            <path id="stroke" d="M354-354A500 500 0 1 1 354 354L-354-354A500 500 0 1 0-354 354z"></path>
+            <use xlink:href="#stroke" stroke-dasharray="1570 5143" stroke-dashoffset="6713px" stroke="url(#gradient)"></use>    
+        </svg>
+
+        <div id="search-bar-div">
+            <input type="text" id="search-bar-input" placeholder="Szukaj...">
+            <button id="search-bar-button" onclick="searchCheck();">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                    <path d="M10.5 3a7.5 7.5 0 0 1 5.964 12.048l4.078 4.08a1 1 0 1 1-1.415 1.414l-4.079-4.078A7.5 7.5 0 1 1 10.5 3zm0 2a5.5 5.5 0 1 0 0 11 5.5 5.5 0 0 0 0-11z"></path>
+                </svg>                
+            </button>
+        </div>
+
+        <ul class="holder">
+            <li class="holder-li"><a class="holder-a" href="#">Kategorie</a>
+                <ul class="lower-holder" id="categories-ul">
+                    
+                </ul>
+            </li>
+            
+            <li class="holder-li"><a class="holder-a" href="#" id="cos">Konto</a> <!-- delet the id  cos later -->
+                <ul class="lower-holder">
+                    <li class="lower-holder-li"><button onClick="window.location='./../login_sign-up/login/login.html';" id="button-zaloguj">Zaloguj się</button></li>
+                    <li class="lower-holder-li" id="logowanie-div-li"><div id="logowanie-div"><div>Nie masz konta?</div></div></li>
+                    <li class="lower-holder-li"><button onClick="window.location='./../login_sign-up/sign-up/sign-up.html';" id="button-zajerestruj">Załóż konto</button></li>
+
+                    <li class="lower-holder-li"><button id="button-wyloguj">wyloguj</button></li>
+
+                </ul>
+            </li>
+
+            <li class="holder-li"><a class="holder-a" href="#">Koszyk</a>
+                <ul class="lower-holder" id="basket-holder">
+                    <li class="lower-holder-li" id="empty-basket">Twój koszyk jest pusty</li>
+                </ul>
+            </li>
+        </ul>
+    </header>
+
+    <div id="main-item-holder">
+        <!--<div class="sub-item-page"> //item sub page template
+            <div class="sub-item-page-picture">
+                <img src="./../img/iphone.png" alt="iphone">
+            </div>
+
+            <div class="sub-item-page-name">
+                Apple iPhone 12 64GB White 5G
+            </div>
+
+            <div class="sub-item-page-price">
+                3 949,00 zł
+            </div>
+
+            <div class="sub-item-page-descrpition">
+                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+            </div>
+
+            <div class="item-select-amount">
+                <select name="amount" id="amount-select">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                </select>
+            </div>
+
+            <div class="item-add-to-basket">
+                <button>
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
+                        <path d="M11 7h1a.5.5 0 1 1 0 1h-1v1a.5.5 0 1 1-1 0V8H9a.5.5 0 0 1 0-1h1V6a.5.5 0 1 1 1 0v1zM5.323 4H8a.5.5 0 0 1 0 1H5.532l1.25 6h7.314l1.286-6H13a.5.5 0 1 1 0-1h3a.5.5 0 0 1 .489.605l-1.5 7A.5.5 0 0 1 14.5 12H6.99l.417 2H14a2 2 0 1 1-1.733 1H8.733a2 2 0 1 1-2.329-.91L4.094 3H2.5a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .49.398L5.322 4zM8 16a1 1 0 1 0-1.999-.001A1 1 0 0 0 8 16zm7 0a1 1 0 1 0-1.999-.001A1 1 0 0 0 15 16z">
+                        </path>
+                    </svg>
+                    Dodaj do koszyka
+                </button>
+            </div>
+        </div>-->
+    </div>
+
+    <script> //temporary change the name, delete id cos linia 71
+        if(localStorage.isLoggedIn == 1)
+            document.getElementById("cos").innerHTML=account.name;     
+    </script>
+
+    
+
+</body>
+
+<footer class="footer">
+    <div class="information">
+        <h3 title="Zamówienia" class="orders_1">Zamówienia</h3>
+
+        <ul class="orders_2">
+            <li class="orders_3">
+                <a class="orders_4" href="./footer/orders/delivery.html">Dostawa</a>
+            </li>
+
+            <li class="orders_3">
+                <a class="orders_4" href="./footer/orders/raty.html">Raty</a>
+            </li>
+
+            <li class="orders_3">
+                <a class="orders_4" href="./footer/orders/insurance.html">Ubezpieczenia</a>
+            </li>
+
+            <li class="orders_3">
+                <a class="orders_4" href="./footer/orders/returns.html">Zwroty</a>
+            </li>
+        </ul>
+    </div>
+
+    <div class="information">
+        <h3 title="Inspiracje" class="orders_1">Inspiracje</h3>
+
+        <ul class="orders_2">
+            <li class="orders_3">
+                <a class="orders_4" href="./footer/inspirations/promotions.html">Promocje</a>
+            </li>
+
+            <li class="orders_3">
+                <a class="orders_4" href="./footer/inspirations/closing_sale.html">Wyprzedaż</a>
+            </li>
+
+            <li class="orders_3">
+                <a class="orders_4" href="./footer/inspirations/guides.html">Poradniki</a>
+            </li>
+        </ul>
+    </div>
+
+    <div class="information">
+        <h3 title="Ogólne" class="orders_1">Ogólne</h3>
+
+        <ul class="orders_2">
+            <li class="orders_3">
+                <a class="orders_4" href="./footer/general/about_us.html">O nas</a>
+            </li>
+
+            <li class="orders_3">
+                <a class="orders_4" href="./footer/general/regulations.html">Regulamin</a>
+            </li>
+
+            <li class="orders_3">
+                <a class="orders_4" href="./footer/general/privacy_policy.html">Polityka prywatności</a>
+            </li>
+        </ul>
+    </div>
+
+
+    <div class="information">
+        <div class="contact-general">
+            <p title="Kontakt" class="orders_1">Kontakt</p>
+            <h5 class="orders_4">Nr.Tel: 69 420 00 00</h5>
+                <p class="orders_4" style="font-size: 15px; margin-left: 15px;">
+                    pon - pt :      8:00 - 21:00<br>
+                    sob - niedz :   8:00 - 19:00
+                </p>
+                <br>
+                <h5 class="orders_4" style="font-size: 15px;">
+                    Email: shop@shop.pl
+                </h5>
+        </div>
+    </div>
+</footer>
+</html>

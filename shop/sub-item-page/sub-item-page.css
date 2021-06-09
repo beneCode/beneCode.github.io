@@ -1,0 +1,129 @@
+.sub-item-page
+{
+    position: relative;
+
+    width: 60%;
+    height: 500px;
+
+    color: #fff;
+    background-color: transparent;
+}
+
+.sub-item-page-picture
+{
+    width: 500px;
+    height: 500px;
+
+    text-align: center;
+}
+
+.sub-item-page-picture img
+{
+    width: 100%;
+    height: 100%;
+}
+
+.sub-item-page-name
+{
+    position: absolute;
+    left: 500px;
+    top: 0;
+
+    padding-top: 25px;
+
+    width: auto;
+    height: 10%;
+
+    font-size: 30px;
+    font-weight: 800;
+}
+
+.sub-item-page-price
+{
+    position: absolute;
+    right: 60px;
+    bottom: 60px;
+
+    width: auto;
+    height: auto;
+
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.sub-item-page-descrpition
+{
+    position: absolute;
+    left: 500px;
+    top: 105px;
+
+    width: 50%;
+    height: auto;
+
+    font-weight: 500;
+}
+
+.item-add-to-basket
+{
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+
+    width: 200px;
+    height: 40px;
+}
+
+.item-add-to-basket button
+{
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+
+    font-weight: 500;
+    font-size: 18px;
+    color: #fff;
+
+    outline: none;
+    background-color: #FD4444;
+    border: 1px #FD4444 solid;
+    border-radius: 25px;
+}
+
+.item-add-to-basket svg
+{
+    width: 30px;
+    height: 30px;
+
+    text-align: center;
+
+    fill: #fff;
+}
+
+.item-select-amount
+{
+    position: absolute;
+    right: 240px;
+    bottom: 10px;
+
+    width: 70px;
+    height: 40px;
+}
+
+.item-select-amount select
+{
+    width: 100%;
+    height: 100%;
+
+    text-align-last:center; 
+    font-size: 20px;
+    font-weight: 500;
+
+    outline: none;
+    border: 1px #FD4444 solid;
+    border-radius: 25px;
+    background-color: transparent;
+    color: #FD4444;
+}
